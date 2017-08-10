@@ -1,0 +1,20 @@
+{
+  "name": "I.UA_testing",
+  "version": "1.0.0",
+  "description": "test practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio"
+  },
+  "keywords": [],
+  "author": "Lora",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "selenium-standalone": "^6.6.0",
+    "wdio-allure-reporter": "^0.1.2",
+    "wdio-mocha-framework": "^0.5.10",
+    "wdio-selenium-standalone-service": "0.0.9",
+    "webdriverio": "^4.8.0"
+  }
+}
