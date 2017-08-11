@@ -1,8 +1,6 @@
-"use strict";
-
 var Page = require('./Page');
 var LoginPage = Object.create(Page, {
-    username: {get: function () {return browser.element('input[name="login"]'); }},
+    username: {get: function () {return browser.element('[name="login"]'); }},
     password: {get: function () {return browser.element('input[name="pass"]'); }},
     form: {get: function () {return browser.element('body > div.Branding_body.page_medium > div.Body.clear >' +
         ' div.Left > div.Left > div.block_gamma_gradient.mail_login > div.content.clear > form > p > input[type="submit"]'); }},
@@ -17,4 +15,4 @@ var LoginPage = Object.create(Page, {
     }}
 });
 
-module.Exports = LoginPage;
+module.exports = LoginPage;
