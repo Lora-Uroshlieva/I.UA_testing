@@ -1,4 +1,5 @@
 var Page = require('./Page');
+
 var HomePage = Object.create(Page, {
     username: {get: function () {return browser.element('[name="login"]'); }},
     password: {get: function () {return browser.element('input[name="pass"]'); }},

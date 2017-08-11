@@ -174,7 +174,7 @@ exports.config = {
     // },
     /**
      * Hook that gets executed _after_ a hook within the suite starts (e.g. runs after calling
-     * afterEach in Mocha)
+     * after in Mocha)
      */
     // afterHook: function () {
     // },
