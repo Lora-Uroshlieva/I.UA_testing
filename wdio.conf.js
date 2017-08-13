@@ -237,4 +237,4 @@ exports.config = {
      */
     // onComplete: function(exitCode) {
     // }
-}
+};

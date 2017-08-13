@@ -1,5 +1,7 @@
+"use strict";
+
 var expect = require('chai').expect;
-var homePage = require('../pages/HomePage');
+var homePage = new (require('../pages/HomePage'));
 
 
 describe('check login to mail', function () {
@@ -15,7 +17,7 @@ describe('check login to mail', function () {
         expect(homePage.flash.getText()).to.contain('Неверный логин или пароль');
     });
 
-    it('should enter into mail page with correct login and password', function () {
+    it('should enter into mail BasePage with correct login and password', function () {
         homePage.open();
         homePage.username.setValue('lora123456');
         homePage.password.setValue('lora123456lora123456');

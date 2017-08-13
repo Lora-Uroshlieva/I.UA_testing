@@ -1,6 +1,8 @@
+"use strict";
+
 var expect = require('chai').expect;
-var mailPage = require('../pages/MailPage');
-var homePage = require('../pages/HomePage');
+let mailPage = new (require('../pages/MailPage'));
+let homePage = new (require('../pages/HomePage'));
 
 
 describe('check message sending', function () {

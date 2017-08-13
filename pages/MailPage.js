@@ -1,22 +1,37 @@
-var MailPage = {
-    open: function () {
-        browser.url('http://mbox2.i.ua/');
-    },
-    createLetter:  function () {
-            return browser.element('body > div.body_container > div.Body > div:nth-child(1) > div.Left > p > a');
-    },
-    to: function () {
+"use strict";
+
+const Page = new (require('./BasePage'));
+
+class MailPage extends Page {
+    constructor() {
+        super();
+    }
+
+    open() {
+        super.open('http://mbox2.i.ua');
+    }
+
+    get createLetter() {
+        return browser.element('div.Left p.make_message a');
+    }
+
+    get to() {
         return browser.element('#to');
-    },
-    subject: function () {
+    }
+
+    get subject() {
         return browser.element('[name="subject"]');
-    },
-    text: function () {
+    }
+
+    get text() {
         return browser.element('#text')
-    },
-    send: function () {
+    }
+
+    get send() {
         return browser.element('[name="send"]');
     }
+}
+module.exports = MailPage;
 
     // inbox: {get: function () {
     //     return browser.element('= Входящие');
@@ -34,6 +49,5 @@ var MailPage = {
     //     browser.element('[title="Настройки"]').click();
     //     return browser.element('=Выйти');
     // }}
-};
 
-module.exports = MailPage;
+
